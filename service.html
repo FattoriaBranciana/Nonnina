@@ -138,7 +138,6 @@
                                 class="cat-tile btn-scopri"
                                 data-title="Torte salate"
                                 data-img="img/prodotti/TorteSalate.jpg"
-                                data-desc="Sfoglia le nostre torte salate pronte da cuocere."
                                 aria-label="Apri il catalogo: Torte salate">
                             <img src="img/prodotti/TorteSalate.jpg" alt="Torte salate">
                             <span class="cat-label">Torte salate</span>
@@ -147,34 +146,51 @@
                     <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <button type="button"
                                 class="cat-tile btn-scopri"
-                                data-title="Dolci"
-                                data-img="img/prodotti/Dolci.png"
-                                data-desc="Dolci della tradizione, pronti da gustare."
-                                aria-label="Apri il catalogo: Dolci">
-                            <img src="img/prodotti/Dolci.png" alt="Dolci">
-                            <span class="cat-label">Dolci</span>
+                                data-title="Monoporzioni salate"
+                                data-img="img/prodotti/MonoporzioniSalate.jpg"
+                                aria-label="Apri il catalogo: Monoporzioni salate">
+                            <img src="img/prodotti/MonoporzioniSalate.jpg" alt="Monoporzioni salate">
+                            <span class="cat-label">Monoporzioni salate</span>
                         </button>
                     </div>
                     <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <button type="button"
                                 class="cat-tile btn-scopri"
-                                data-title="Primi piatti"
-                                data-img="img/prodotti/PrimiPiatti.jpg"
-                                data-desc="Pasta e primi pronti con ingredienti selezionati."
-                                aria-label="Apri il catalogo: Primi piatti">
-                            <img src="img/prodotti/PrimiPiatti.jpg" alt="Primi piatti">
-                            <span class="cat-label">Primi piatti</span>
+                                data-title="Il dolce"
+                                data-img="img/prodotti/IlDolce.jpg"
+                                aria-label="Apri il catalogo: Il dolce">
+                            <img src="img/prodotti/IlDolce.jpg" alt="Il dolce">
+                            <span class="cat-label">Il dolce</span>
                         </button>
                     </div>
                     <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <button type="button"
                                 class="cat-tile btn-scopri"
-                                data-title="Piatti pronti"
-                                data-img="img/prodotti/PiattiPronti.png"
-                                data-desc="Soluzioni pratiche e gustose per ogni pasto."
-                                aria-label="Apri il catalogo: Piatti pronti">
-                            <img src="img/prodotti/PiattiPronti.png" alt="Piatti pronti">
-                            <span class="cat-label">Piatti pronti</span>
+                                data-title="La pasta"
+                                data-img="img/prodotti/LaPasta.jpg"
+                                aria-label="Apri il catalogo: La pasta">
+                            <img src="img/prodotti/PrimiPiatti.jpg" alt="La pasta">
+                            <span class="cat-label">La pasta</span>
+                        </button>
+                    </div>
+                    <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <button type="button"
+                                class="cat-tile btn-scopri"
+                                data-title="I piatti pronti"
+                                data-img="img/prodotti/IPiattiPronti.jpg"
+                                aria-label="Apri il catalogo: I piatti pronti">
+                            <img src="img/prodotti/PiattiPronti.png" alt="I piatti pronti">
+                            <span class="cat-label">I piatti pronti</span>
+                        </button>
+                    </div>
+                    <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <button type="button"
+                                class="cat-tile btn-scopri"
+                                data-title="L'erbazzone"
+                                data-img="img/prodotti/LErbazzone.jpg"
+                                aria-label="Apri il catalogo: L'erbazzone">
+                            <img src="img/prodotti/LErbazzone.jpg" alt="L'erbazzone">
+                            <span class="cat-label">L'erbazzone</span>
                         </button>
                     </div>
                 </div>
@@ -229,8 +245,8 @@
                             <div class="d-flex flex-column align-items-start">
                                 <p><i class="fa fa-map-marker-alt text-NonnaLea me-2"></i> Via Maresciallo Tito 45/A, Montecavolo, Reggio Emilia</p>
                                 <p><i class="fa fa-phone-alt text-NonnaLea me-2"></i> 0522 880133</p>
-                                <p><i class="fas fa-envelope text-NonnaLea me-2"></i> nonnalea@nonnalea.it</p>
-                                <p><i class="fa fa-clock text-NonnaLea me-2"></i> 8:00/12:30 - 15:00/19:00</p>
+                                <p><i class="fas fa-envelope text-NonnaLea me-2"></i> NonnaLea@nonnalea.it</p>
+                                <p><i class="fa fa-clock text-NonnaLea me-2"></i> 8:00/13:00 - 15:00/19:00</p>
                             </div>
                         </div>
                     </div>
@@ -389,8 +405,8 @@
                                     <!-- inseriti dinamicamente -->
                                 </div>
 
-                                <h6 class="sezione-titolo">Tutti gli altri prodotti</h6>
-                                <div class="lista-box">
+                                <h6 class="sezione-titolo" id="titoloElenco">Tutti gli altri prodotti</h6>
+                                <div class="lista-box" id="boxElenco">
                                     <ul id="categoriaElenco" class="list-unstyled lista-prodotti row row-cols-1 row-cols-sm-2 mb-0">
                                         <!-- inseriti dinamicamente -->
                                     </ul>
@@ -429,26 +445,154 @@
             // ============================================================
             var catalogo = {
                 'Torte salate': {
-                    amati: [{ nome: 'Erbazzone', foto: 'Erbazzone.jpg' }, { nome: 'Torta di patate', foto: 'torta-di-patate.jpg' },
-                    { nome: 'Tortini misti', foto: 'tortini-misti.jpg' },{ nome: 'Erbazzone', foto: 'Erbazzone.jpg' }],
-                    altri: ['Prodotto 5', 'Prodotto 6', 'Prodotto 7', 'Prodotto 8', 'Prodotto 9', 'Prodotto 10',
-                            'Prodotto 11', 'Prodotto 12', 'Prodotto 13', 'Prodotto 14', 'Prodotto 15', 'Prodotto 16']
+
+                    amati: [
+                        { nome: 'Torta ai carciofi', foto: 'torta-ai-carciofi.jpg' },
+                        { nome: 'Torta valdostana', foto: 'torta-valdostana.jpg' },
+                        { nome: '[DA DECIDERE]', foto: 'da-decidere.jpg' }
+                    ],
+
+                    altri: [
+                        'Torta Montanara',
+                        'Torta di Patate',
+                        'Torta di Patate Piacentina',
+                        'Torta Melanzane e Mozzarella',
+                        'Torta Asparagi e Prosciutto Cotto',
+                        'Torta Norvegese',
+                        'Sformato di Verdure',
+                        'Focaccia Stracchino e Rucola',
+                        'Torta di Zucca Vegana',
+                        'Torta di Patate e Verza Vegana',
+                        'Tortini Misti',
+                        'Spintini'
+                    ]
+
                 },
-                'Dolci': {
-                    amati: [{ nome: 'Bigné', foto: 'bigne.jpg' }, { nome: 'Cannellini alla crema', foto: 'cannellini-crema.jpg' },
-                    { nome: 'Torta di mele', foto: 'torta-di-mele.jpg' },{ nome: 'Coppe monoporzioni', foto: 'coppe-monoporzioni.jpg' }],
-                    altri: ['Torta alla frutta', 'Pasticciotto', 'Torta al limone', 'Torta nera', 'Crostata al cioccolato', 'Crostata di amarena']
+
+                'Monoporzioni salate': {
+
+                    amati: [
+                        { nome: 'Trecce', foto: 'trecce.jpg' },
+                        { nome: 'Gnocco Fritto', foto: 'gnocco-fritto.jpg' },
+                        { nome: 'Kizze', foto: 'kizze.jpg' },
+                        { nome: 'Triangolo di Erbazzone', foto: 'triangolo-di-erbazzone.jpg' }
+                    ],
+
+                    altri: [
+                        'Rusticotto Pomodoro e Mozzarella',
+                        'Rusticotto Prosciutto Cotto e Mozzarella',
+                        'Rusticotto Spinaci e Ricotta',
+                        'Salatini Verdi',
+                        'Salatini al Formaggio',
+                        'Salatini al Cotto',
+                        'Salatini ai Wurstel',
+                        'Pizzette',
+                        'Cestino Pizza alle Olive',
+                        'Fagottini da Friggere al Formaggio',
+                        'Fagottini da Friggere all\'Erbazzone'
+                    ]
+
                 },
-                'Primi piatti': {
-                    amati: [{ nome: 'Cappelletti', foto: 'cappelletti.jpg' }, 'Prodotto 2', 'Prodotto 3', 'prodotto 4'],
-                    altri: ['Prodotto 5', 'Prodotto 6', 'Prodotto 7', 'Prodotto 8', 'Prodotto 9', 'Prodotto 10',
-                            'Prodotto 11', 'Prodotto 12', 'Prodotto 13', 'Prodotto 14', 'Prodotto 15', 'Prodotto 16']
+
+                'Il dolce': {
+
+                    amati: [
+                        { nome: 'Coppe Monoporzione', foto: 'coppe-monoporzione.jpg' },
+                        { nome: 'Bignè', foto: 'bigne.jpg' },
+                        { nome: 'Zuppa Inglese', foto: 'zuppa-inglese.jpg' },
+                        { nome: 'Torta Tagliatelle', foto: 'torta-tagliatelle.jpg' }
+                    ],
+
+                    altri: [
+                        'Torta della Nonna',
+                        'Torta del Nonno',
+                        'Torta al Limone',
+                        'Torta Nera',
+                        'Torta agli Amaretti',
+                        'Cheesecake al Gianduia',
+                        'Cheesecake ai Frutti di Bosco',
+                        'Crostate di Albicocca',
+                        'Crostate di Prugna',
+                        'Crostate di Amarene',
+                        'Torta di Riso',
+                        'Torta Tenerina',
+                        'Il Cremoso',
+                        'Cannellini Mignon Crema e Cioccolato',
+                        'Cannellini alla Crema',
+                        'Cestini alla Mela',
+                        'Cestini alla Prugna',
+                        'Risini',
+                        'Dolce Mattone',
+                        'Salame al Cioccolato',
+                        'Stracchino della Nonna'
+                    ]
+
                 },
-                'Piatti pronti': {
-                    amati: [{ nome: 'Triangolini speck e rucola', foto: 'triangolini-speck-e-rucola.jpg' }, { nome: 'Trippa', foto: 'trippa.jpg' },
-                    'Prodotto 2', 'Prodotto 3'],
-                    altri: ['Prodotto 5', 'Prodotto 6', 'Prodotto 7', 'Prodotto 8', 'Prodotto 9', 'Prodotto 10',
-                            'Prodotto 11', 'Prodotto 12', 'Prodotto 13', 'Prodotto 14', 'Prodotto 15', 'Prodotto 16']
+
+                'La pasta': {
+
+                    amati: [
+                        { nome: 'Tortelli Verdi della Nonna', foto: 'tortelli-verdi-della-nonna.jpg' },
+                        { nome: 'Tortelli di Zucca della Nonna', foto: 'tortelli-di-zucca-della-nonna.jpg' },
+                        { nome: 'Cappelletti', foto: 'cappelletti.jpg' }
+                    ],
+
+                    altri: [
+                        'Tortelli di Patate della Nonna',
+                        'Tortelli di Radicchio della Nonna',
+                        'Cappellettoni Verdi',
+                        'Cappellettoni ai Funghi',
+                        'Ravioli di Carne',
+                        'Triangolini allo Speck',
+                        'Tagliatelle',
+                        'Garganelli',
+                        'Anolini',
+                        'Tortelli Verdi Parma',
+                        'Gnocchi di Patate',
+                        'Gnocchi di Zucca',
+                        'Chicche di Patate',
+                        'Chicche Verdi',
+                        'Lasagne',
+                        'Lasagne ai Funghi',
+                        'Nidi di Rondine',
+                        'Cannelloni Ricotta e Spinaci'
+                    ]
+
+                },
+
+                'I piatti pronti': {
+
+                    amati: [
+                        { nome: 'Lasagne', foto: 'lasagne.jpg' },
+                        { nome: 'Gramigna alla Salsiccia', foto: 'gramigna-alla-salsiccia.jpg' },
+                        { nome: 'Cappelletti alla Panna', foto: 'cappelletti-alla-panna.jpg' },
+                        { nome: 'Tortelli Verdi al Burro', foto: 'tortelli-verdi-al-burro.jpg' }
+                    ],
+
+                    altri: [
+                        // Lista completa da aggiungere
+                    ]
+
+                },
+
+                "L'erbazzone": {
+
+                    amati: [
+                        { nome: 'Erbazzone Reggiano', foto: 'erbazzone-reggiano.jpg' },
+                        { nome: 'Erbazzone Artigianale', foto: 'erbazzone-artigianale.jpg' },
+                        { nome: "Erbazzone all'Olio", foto: 'erbazzone-all-olio.jpg' },
+                        { nome: 'Erbazzone di Sfoglia', foto: 'erbazzone-di-sfoglia.jpg' }
+                    ],
+
+                    altri: [
+                        'Erbazzone di Ricotta',
+                        'Erbazzone Vegano',
+                        'Erbazzone di Zucca',
+                        'Erbazzone Rustico',
+                        'Scarpasoun',
+                        'Erbazzone Light'
+                    ]
+
                 }
             };
 
@@ -491,6 +635,10 @@
                     document.getElementById('categoriaElenco').innerHTML = dati.altri.map(function (name) {
                         return '<li class="col">' + name + '</li>';
                     }).join('');
+                    // se l'elenco è vuoto, nascondo titolo e riquadro
+                    var haAltri = dati.altri.length > 0;
+                    document.getElementById('titoloElenco').style.display = haAltri ? '' : 'none';
+                    document.getElementById('boxElenco').style.display = haAltri ? '' : 'none';
 
                     var modalEl = document.getElementById('categoriaModal');
                     var modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
