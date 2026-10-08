@@ -73,7 +73,49 @@
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5">
-                        <img src="img/about-1.jpg" class="testimonial-item rounded bg-light" alt="" style="box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);">
+                        <!-- Carousel with fixed dimensions -->
+                        <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" style="max-width:420px;">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            </div>
+                            <div class="carousel-inner" style="height:300px; border-radius: 5%; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);">
+                                <div class="carousel-item active">
+                                    <img src="img/about-1.jpg" class="d-block w-100" alt="Nonna Lea 1" style="height:300px; object-fit:cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/about-2.jpg" class="d-block w-100" alt="Nonna Lea 2" style="height:300px; object-fit:cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/about-3.jpg" class="d-block w-100" alt="Nonna Lea 3" style="height:300px; object-fit:cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/about-4.jpg" class="d-block w-100" alt="Nonna Lea 4" style="height:300px; object-fit:cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/about-5.jpg" class="d-block w-100" alt="Nonna Lea 5" style="height:300px; object-fit:cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/about-6.jpg" class="d-block w-100" alt="Nonna Lea 6" style="height:300px; object-fit:cover;">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="img/about-7.jpg" class="d-block w-100" alt="Nonna Lea 7" style="height:300px; object-fit:cover;">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="col-lg-7  wow bounceInUp">
                         <h1 class="display-5 mb-4">Nonna Lea</h1>
