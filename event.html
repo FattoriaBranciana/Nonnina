@@ -99,11 +99,11 @@
             // Array di eventi
             const eventi = [
                 {
-                    titolo: "Sagra dal Scarpasoun",
-                    data: "2025-06-07",
-                    luogo: "Via Fratelli Cervi, Montecavolo (RE)",
-                    descrizione: "Festa dedicata allo scarpasoun",
-                    img: "img/sagra25.jpg"
+                    titolo: "SIGEP",
+                    data: "2027-01-23",
+                    luogo: "Rimini Fiera, Rimini",
+                    descrizione: "Stand Nonna Lea padiglione B7 <br> Dal 23 al 27 gennaio",
+                    img: "img/SIGEP19.jpg"
                 },
                 {
                     titolo: "SIGEP",
@@ -120,7 +120,7 @@
                     img: "img/CiccioInCentro.jpg"
                 },
                 {
-                    titolo: "Sagra dal Scarpasoun",
+                    titolo: "Sagra dal Scarpasoun '26",
                     data: "2026-06-07",
                     luogo: "Via Fratelli Cervi, Montecavolo (RE)",
                     descrizione: "Festa dedicata allo scarpasoun",
@@ -154,7 +154,7 @@
                 const dataObj = new Date(evento.data);
                 const day = dataObj.toLocaleDateString('it-IT', { day: '2-digit' });
                 const month = dataObj.toLocaleDateString('it-IT', { month: 'short' });
-                const formattedDate = `${day} ${month}`;
+                const year = dataObj.getFullYear();
 
                 col.innerHTML = `
                     <div class="event-img position-relative">
@@ -162,7 +162,10 @@
                         
                         <!-- barra sempre visibile in basso con data + titolo -->
                         <div class="event-caption d-flex align-items-center justify-content-between p-3">
-                            <div class="event-date">${formattedDate}</div>
+                            <div class="event-date">
+                                <span class="event-date-dm">${day} ${month}</span>
+                                <span class="event-date-year">${year}</span>
+                            </div>
                             <h5 class="mb-0 event-title">${evento.titolo}</h5>
                         </div>
 
@@ -198,7 +201,7 @@
                                 <p><i class="fa fa-map-marker-alt text-NonnaLea me-2"></i> Via Maresciallo Tito 45/A, Montecavolo, Reggio Emilia</p>
                                 <p><i class="fa fa-phone-alt text-NonnaLea me-2"></i> 0522 880133</p>
                                 <p><i class="fas fa-envelope text-NonnaLea me-2"></i> nonnalea@nonnalea.it</p>
-                                <p><i class="fa fa-clock text-NonnaLea me-2"></i> 8:00/12:30 - 15:00/19:00</p>
+                                <p><i class="fa fa-clock text-NonnaLea me-2"></i> Lun.-Ven. 8:00/12:30 - 15:00/19:00 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sab. 9:00/12:30</p>
                             </div>
                         </div>
                     </div>
@@ -229,7 +232,6 @@
             </div>
         </div>
         <!-- Footer End -->
-
 
         <!-- Copyright Start -->
         <div class="container-fluid copyright bg-NonnaLea py-4">
