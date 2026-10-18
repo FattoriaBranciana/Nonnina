@@ -67,7 +67,6 @@
         <!-- Hero Start -->
         <img src="img/NostroMenu.png" alt="Hero Image" style="width: 100%; height: auto;">
         <!-- Hero End -->
-
         <!-- Prodotti principali Start -->
         <div id="prodotti" class="container-fluid py-6">
             <div class="container">
@@ -114,7 +113,7 @@
                     .cat-tile:focus-visible img { transform: scale(1.08); }
                     .cat-tile:hover::after,
                     .cat-tile:focus-visible::after { background: rgba(0,0,0,.12); }
-                    .cat-grid { max-width: 880px; }      /* riduce la dimensione delle immagini */
+                    .cat-grid { max-width: 880px; }      /* mobile e tablet: invariato */
                     .cat-label {                         /* bordino semi-opaco con il nome */
                         position: absolute;
                         top: 0; left: 0; right: 0;
@@ -131,6 +130,22 @@
                     }
                     .cat-tile:active { transform: translateY(-3px); }
                     .cat-tile:focus-visible { outline: 3px solid #722f21; outline-offset: 3px; }
+
+                    /* ===== Solo desktop: card più grandi ===== */
+                    @media (min-width: 992px) {
+                        .cat-grid { max-width: 1100px; }
+                        .cat-label {
+                            font-size: 1.4rem;
+                            padding: .7rem 1.25rem;
+                        }
+                    }
+
+                    /* ===== Schermi molto larghi ===== */
+                    @media (min-width: 1400px) {
+                        #prodotti .container { max-width: 1500px; }
+                        .cat-grid { max-width: 1300px; }
+                        .cat-label { font-size: 1.6rem; }
+                    }
                 </style>
                 <div class="row g-4 g-lg-5 mx-auto cat-grid">
                     <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -298,7 +313,7 @@
         </div>
         <!-- Footer End -->
 
-        
+
         <!-- Categoria Modal Start -->
         <style>
             /* ===== Scheda categoria ===== */

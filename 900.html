@@ -71,24 +71,49 @@
         <!-- About Start -->
         <div class="container-fluid py-6">
             <div class="container">
+                <style>
+                    /* Carosello: mobile e tablet invariati */
+                    .about-carousel { max-width: 420px; }
+                    .about-carousel .carousel-inner {
+                        height: 300px;
+                        border-radius: 5%;
+                    }
+                    .about-carousel .carousel-item img {
+                        height: 300px;
+                        object-fit: cover;
+                    }
+
+                    /* Solo desktop: carosello più grande */
+                    @media (min-width: 992px) {
+                        .about-carousel { max-width: 100%; }
+                        .about-carousel .carousel-inner,
+                        .about-carousel .carousel-item img { height: 420px; }
+                    }
+
+                    /* Schermi molto larghi */
+                    @media (min-width: 1400px) {
+                        .about-carousel .carousel-inner,
+                        .about-carousel .carousel-item img { height: 480px; }
+                    }
+                </style>
                 <div class="row g-5 align-items-center">
-                    <div class="col-lg-5">
-                        <!-- Carousel with fixed dimensions -->
-                        <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel" style="max-width:420px;">
+                    <div class="col-lg-6">
+                        <!-- Carousel -->
+                        <div id="aboutCarousel" class="carousel slide about-carousel" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                 <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                 <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                             </div>
-                            <div class="carousel-inner" style="height:300px; border-radius: 5%;">
+                            <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="img/900-1.jpg" class="d-block w-100" alt="900 1" style="height:300px; object-fit:cover;">
+                                    <img src="img/900-1.jpg" class="d-block w-100" alt="900 1">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="img/900-2.jpg" class="d-block w-100" alt="900 2" style="height:300px; object-fit:cover;">
+                                    <img src="img/900-2.jpg" class="d-block w-100" alt="900 2">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="img/900-3.jpg" class="d-block w-100" alt="900 3" style="height:300px; object-fit:cover;">
+                                    <img src="img/900-3.jpg" class="d-block w-100" alt="900 3">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
@@ -101,7 +126,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-lg-7 wow bounceInUp">
+                    <div class="col-lg-6 wow bounceInUp">
                         <h1 class="display-5 mb-4">PRONTO SOCCORSO ERBAZZONE</h1>
                         <p class="text-dark mb-4">
                             Ci trovate nelle migliori sagre e feste della regione: il nostro furgoncino "Pronto Soccorso Erbazzone" è sempre pronto a servirvi. Venite a sentire il profumo e a gustare i nostri prodotti più buoni e tradizionali, preparati con ricette genuine e ingredienti di qualità. Dalle specialità di stagione agli immancabili erbazzoni, portiamo la tradizione direttamente alle vostre feste.
@@ -155,7 +180,7 @@
             </div>
         </div>
         <!-- Footer End -->
-         
+
 
         <!-- Copyright Start -->
         <div class="container-fluid copyright bg-NonnaLea py-4">
